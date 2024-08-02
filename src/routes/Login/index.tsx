@@ -38,7 +38,7 @@ export const Login = () => {
                 name="password"
                 id="password"
                 placeholder="JohnD0e@1!"
-                className="w-[85%] h-full px-2 bg-transparent text-white text-xs border-transparent focus:border-transparent focus:ring-0 focus:outline-none rounded-e-lg"
+                className="w-[85%] h-full px-2 bg-transparent text-white text-xs border-transparent focus:border-transparent focus:ring-0 focus:outline-none rounded-s-lg"
                 required
               />
               <button
