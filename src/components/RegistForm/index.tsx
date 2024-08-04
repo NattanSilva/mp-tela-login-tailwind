@@ -25,15 +25,17 @@ export const RegistForm = ({ setResgistred }: RegistFormProps) => {
           >
             Nome
           </label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="John Doe"
-            className="w-full h-10 xl:h-14 px-2 lg:px-3 bg-[#111112] rounded-lg text-white text-xs xl:text-lg  border-transparent focus:border-transparent focus:ring-0 focus:outline-none"
-            required
-            onChange={(e) => setName(e.target.value)}
-          />
+          <div className="w-full p-[1px] bg-none focus-within:bg-gradient-to-tr from-rainbow-1 via-rainbow-2 via-[46%] to-rainbow-3 rounded-lg">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="John Doe"
+              className="w-full h-10 xl:h-14 px-2 lg:px-3 bg-[#111112] rounded-lg text-white text-xs xl:text-lg  border-transparent focus:border-transparent focus:ring-0 focus:outline-none"
+              required
+              onChange={(e) => setName(e.target.value)}
+            />
+          </div>
         </div>
         <div className="w-full flex flex-col gap-1 lg:gap-2">
           <label
@@ -42,15 +44,17 @@ export const RegistForm = ({ setResgistred }: RegistFormProps) => {
           >
             Email
           </label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="JohnDoe@mail.com"
-            className="w-full h-10 xl:h-14 px-2 lg:px-3 bg-[#111112] rounded-lg text-white text-xs xl:text-lg  border-transparent focus:border-transparent focus:ring-0 focus:outline-none"
-            required
-            onChange={(e) => setEmail(e.target.value)}
-          />
+          <div className="w-full p-[1px] bg-none focus-within:bg-gradient-to-tr from-rainbow-1 via-rainbow-2 via-[46%] to-rainbow-3 rounded-lg">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="JohnDoe@mail.com"
+              className="w-full h-10 xl:h-14 px-2 lg:px-3 bg-[#111112] rounded-lg text-white text-xs xl:text-lg  border-transparent focus:border-transparent focus:ring-0 focus:outline-none"
+              required
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
         </div>
         <div className="w-full flex flex-col gap-1 lg:gap-2">
           <label
@@ -59,13 +63,13 @@ export const RegistForm = ({ setResgistred }: RegistFormProps) => {
           >
             Senha
           </label>
-          <div className="w-full h-10 xl:h-14 flex bg-[#111112] rounded-lg">
+          <div className="w-full h-10 xl:h-14 p-[1px] flex bg-none focus-within:bg-gradient-to-tr from-rainbow-1 via-rainbow-2 via-[46%] to-rainbow-3 rounded-lg">
             <input
               type={showPassword ? 'text' : 'password'}
               name="password"
               id="password"
               placeholder="JohnD0e@1!"
-              className="w-[85%] h-full px-2 lg:px-3 bg-transparent text-white text-xs xl:text-lg  border-transparent focus:border-transparent focus:ring-0 focus:outline-none rounded-s-lg"
+              className="w-[85%] h-full px-2 lg:px-3 bg-[#111112] text-white text-xs xl:text-lg  border-transparent focus:border-transparent focus:ring-0 focus:outline-none rounded-s-lg"
               required
               onChange={(e) => setPassword(e.target.value)}
             />
@@ -74,7 +78,7 @@ export const RegistForm = ({ setResgistred }: RegistFormProps) => {
                 e.preventDefault();
                 setShowPassword(!showPassword);
               }}
-              className="w-[15%] h-full flex justify-center items-center"
+              className="w-[15%] h-full flex justify-center items-center bg-[#111112] rounded-e-lg"
             >
               {!showPassword ? (
                 <FaEye className="text-[#9CA3AF] text-xs xl:text-lg " />
