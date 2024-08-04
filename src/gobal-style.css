@@ -11,3 +11,25 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+@keyframes PopUp {
+  0% {
+    transform: scale(0);
+  }
+
+  25% {
+    transform: scale(0.5);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animation-pop {
+  animation: PopUp 0.3s ease-in-out;
+}

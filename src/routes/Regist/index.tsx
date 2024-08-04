@@ -5,7 +5,7 @@ type LoginProps = {
   setResgistred: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export const Login = ({ setResgistred }: LoginProps) => {
+export const Regist = ({ setResgistred }: LoginProps) => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -15,10 +15,23 @@ via-[#0E0D10] to-[#121216]"
     >
       <div className="w-[90%] flex flex-col gap-5 p-8 bg-[#070709] rounded-lg animation-pop">
         <h3 className="w-full h-full flex items-end gap-1 text-2xl text-white font-bold">
-          Faça seu Login
+          Cadastre-se
           <div className="w-2 h-2 rounded-full bg-gradient-to-tr from-[#4158D0] via-[#C850C0] to-[#FFCC70] mb-2"></div>
         </h3>
         <form className="w-full flex flex-col gap-4">
+          <div>
+            <label htmlFor="name" className="text-sm text-[#9CA3AF]">
+              Nome
+            </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="John Doe"
+              className="w-full h-10 px-2 bg-[#111112] rounded-lg text-white text-xs border-transparent focus:border-transparent focus:ring-0 focus:outline-none"
+              required
+            />
+          </div>
           <div>
             <label htmlFor="email" className="text-sm text-[#9CA3AF]">
               Email
@@ -60,25 +73,20 @@ via-[#0E0D10] to-[#121216]"
               </button>
             </div>
           </div>
-          <span
-            className="w-full flex justify-end underline mb-3 text-[#9CA3AF] text-xs"
-          >
-            Esqueci minha senha
-          </span>
           <button
             type="submit"
             disabled
             className="w-full h-10 bg-gradient-to-tr from-[#4158D0] via-[#C850C0] to-[#FFCC70] text-white text-xl font-semibold rounded-lg disabled:cursor-not-allowed disabled:opacity-50"
           >
-            Entrar
+            Cadastrar
           </button>
           <span
             onClick={() => {
-              setResgistred(false);
+              setResgistred(true);
             }}
             className="w-full flex justify-center underline mt-3 text-[#9CA3AF] text-xs"
           >
-            Ainda não tenho conta
+            Já possuo conta
           </span>
         </form>
       </div>
