@@ -1,11 +1,8 @@
 import { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
-type RegistFormProps = {
-  setResgistred: React.Dispatch<React.SetStateAction<boolean>>;
-};
-
-export const RegistForm = ({ setResgistred }: RegistFormProps) => {
+export const RegistForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -95,14 +92,12 @@ export const RegistForm = ({ setResgistred }: RegistFormProps) => {
         >
           Cadastrar
         </button>
-        <span
-          onClick={() => {
-            setResgistred(true);
-          }}
+        <Link
+          to={'/login'}
           className="w-full flex justify-center underline mt-3 text-[#9CA3AF] text-xs xl:text-lg  lg:text-sm cursor-pointer"
         >
           Já possuo conta
-        </span>
+        </Link>
       </form>
     </div>
   );

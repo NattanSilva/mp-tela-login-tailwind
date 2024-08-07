@@ -1,11 +1,8 @@
 import { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
-type LoginFormProps = {
-  setResgistred: React.Dispatch<React.SetStateAction<boolean>>;
-};
-
-export const LoginForm = ({ setResgistred }: LoginFormProps) => {
+export const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -78,12 +75,12 @@ export const LoginForm = ({ setResgistred }: LoginFormProps) => {
         >
           Entrar
         </button>
-        <span
-          onClick={() => setResgistred(false)}
+        <Link
+          to={'/regist'}
           className="w-full flex justify-center underline mt-3 text-[#9CA3AF] text-xs lg:text-sm xl:text-lg cursor-pointer"
         >
           Ainda não tenho conta
-        </span>
+        </Link>
       </form>
     </div>
   );
