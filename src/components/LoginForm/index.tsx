@@ -6,7 +6,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import { loginFormSchema } from '../../schemas/formsSchemas';
 import { LoginData } from '../../types/formTypes';
 
-export const LoginForm = () => {
+type LoginFormProps = {
+  setModal: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+export const LoginForm = ({ setModal }: LoginFormProps) => {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const localEmail = localStorage.getItem('@email');
@@ -91,7 +95,10 @@ export const LoginForm = () => {
         {errors.password && (
           <p className="text-red-500 text-xs">{errors.password.message}</p>
         )}
-        <span className="w-full flex justify-end underline mb-3 text-[#9CA3AF] text-xs lg:text-sm xl:text-lg cursor-pointer">
+        <span
+          onClick={() => setModal(true)}
+          className="w-full flex justify-end underline mb-3 text-[#9CA3AF] text-xs lg:text-sm xl:text-lg cursor-pointer"
+        >
           Esqueci minha senha
         </span>
         <button
